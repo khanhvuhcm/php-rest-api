@@ -22,6 +22,19 @@
 `php -S localhost:8000`
 ## Usage
 ### Use Curl or Postman
+- Create User:\
+`curl --location --request POST 'http://127.0.0.1:8000/api/auth/create' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "user1",
+    "password": "password1",
+    "role": "1"
+}'`
+- Sample response:\
+`{
+    "message": "new user created"
+}`
+
 - Login to get token string:\
 `curl --location --request POST 'http://localhost:8000/api/auth/login' \
 --header 'Content-Type: application/json' \

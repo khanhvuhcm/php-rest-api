@@ -31,4 +31,18 @@ class AuthController
         }
     }
 
+    public function create($data)
+    {
+        $user = new User();
+        $user->setUsername($data->username);
+        $user->setPassword($data->password);
+        $user->setRole($data->role);
+
+        if ($this->user_model->create($user)) {
+            return Response::sendWithCode(201, "new user created");
+        } else {
+            return Response::sendWithCode(500, "an error");
+        }
+    }
+
 }

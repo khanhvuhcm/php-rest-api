@@ -13,6 +13,10 @@ require_once __DIR__ . '/app/post/PostController.php';
 
 // Route::add($request_method, $request_path, $callback_function, $enable_auth = true)
 
+Route::add('POST', '/api/auth/create', function (Request $request) {
+    echo (new AuthController())->create($request->getJSON());
+}, false);
+
 Route::add('POST', '/api/auth/login', function (Request $request) {
     echo (new AuthController())->login($request->getJSON());
 }, false);

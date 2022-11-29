@@ -50,7 +50,6 @@ class PostController
 
     public function create($data)
     {
-        var_dump($data);
         $post = new Post();
         $post->setCategory($data->category);
         $post->setTitle($data->title);
