@@ -1,0 +1,9 @@
+### Composer ###
+vendor/*
+
+### VisualStudioCode ###
+.vscode/*
+**/.history
+
+### PhpStorm ###
+.idea/*
